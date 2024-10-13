@@ -1,3 +1,4 @@
+/* General body and reset */
 body {
     font-family: 'Arial', sans-serif;
     padding: 0;
@@ -5,11 +6,10 @@ body {
     background-color: #f8f9fa;
 }
 
- /* Sidebar styling */
+/* Sidebar styling */
 .sidebar {
     background-color: #f9f4ef;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 0;
 }
 
 .sidebar-logo {
@@ -37,17 +37,13 @@ body {
     text-align: right;
     padding: 17px 30px;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.nav-link.active {
-    background-color: #d48b63;
-    color: #fff;
-}
-
+.nav-link.active,
 .nav-link:hover {
     background-color: #d48b63;
     color: #fff;
-    transition: background-color 0.3s;
 }
 
 /* Content area styling */
@@ -66,22 +62,6 @@ main p {
     line-height: 1.6;
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-    .sidebar {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .nav-link {
-        font-size: 16px;
-    }
-
-    main {
-        padding: 20px;
-    }
-}
-
 /* About Section */
 .about-section {
     background-color: #fff;
@@ -97,9 +77,9 @@ main p {
 .image-container img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .image-backdrop {
@@ -108,34 +88,18 @@ main p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    border-radius: 10px; /* Same as the image */
+    border-radius: 15px !important;
 }
 
 .image-backdrop h2 {
     color: #fff;
     font-size: 1.75rem;
+    padding: 20px 30px;
     text-align: right;
-    padding: 20px;
-}
-.about-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #5a5a5a;
-}
-
-/* For smaller screens (adjusting text and image sizes) */
-@media (max-width: 768px) {
-    .about-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-section p {
-        font-size: 1rem;
-    }
 }
 
 /* Vision and Mission Section */
@@ -167,16 +131,10 @@ main p {
     color: #d48b63 !important;
 }
 
-@media (max-width: 768px) {
-    .vision-mission-section i {
-        font-size: 2.5rem;
-    }
-}
-
 /* Testimonial Section */
 .testimonial-section {
     background-color: #fff;
-    padding: 20px 0px;
+    padding: 20px 0;
     margin: 0 -24px;
 }
 
@@ -186,10 +144,10 @@ main p {
 }
 
 .testimonial-card {
-    border: 1px solid #d48b63; /* Border color */
-    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #d48b63;
+    border-radius: 15px;
     background-color: #fcfaf7;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card p {
@@ -199,9 +157,306 @@ main p {
     margin: 0;
 }
 
-/* Responsive adjustments */
+
+/* Treatments Section */
+.treatments-section {
+    padding: 20px 0px;
+    background-color: #fff;
+}
+
+.treatments-section h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay content */
+.overlay-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f9f4ef;
+    padding: 10px 20px;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.treatment-icon a {
+    background-color: #d48b63;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    width: 60px;
+}
+
+.treatment-icon a:hover {
+    background-color: #c37950;
+}
+
+.treatment-icon i {
+    transform: rotate(-45deg);
+}
+
+.treatment-text p {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+/* Why Us Section */
+.why-us-section {
+    background-color: #fff;
+    padding: 20px 0px;
+}
+
+.why-us-section h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-card {
+    background-color: #f2e8da;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.service-card .icon-holder {
+    background: #e3a879;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+/* Font Awesome Icons */
+.service-icon {
+    font-size: 3rem;
+    color: #f2e8da;
+    margin-bottom: 0 !important;
+}
+
+.service-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.gallery-section h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Image container styling */
+.gallery-section .image-container {
+    position: relative;
+}
+
+.gallery-section .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Button inside image */
+.gallery-section .btn-icon {
+    background-color: #d48b63;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    width: 58px;
+}
+
+.gallery-section .btn-icon i {
+    transform: rotate(-45deg);
+}
+
+.team-section {
+    background-color: #fff;
+    padding: 20px 0px;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    color: #000 !important;
+    text-align: right;
+}
+
+.team-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333 !important;
+    text-align: right;
+}
+
+.team-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: right;
+}
+
+/* Medical Treatment Section */
+.medical-treatments-section {
+    background-color: #fff;
+    padding: 20px 0px;
+}
+.medical-treatments-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.medical-treatment-card {
+    position: relative;
+    background-color: #f9f4ef;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.medical-treatment-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+}
+
+.medical-treatment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f4ef;
+    border-radius: 0 0 15px 15px;
+}
+
+.medical-treatment-name {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+}
+
+.btn-medical-icon {
+    background-color: #d48b63;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.btn-medical-icon:hover {
+    background-color: #bf7148;
+}
+
+.btn-medical-icon i {
+    font-size: 1.2rem;
+}
+
+/* Responsive styling */
 @media (max-width: 768px) {
-    .testimonial-card p {
+    .sidebar {
+        padding: 0 10px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .about-section h2,
+    .testimonial-section h2,
+    .vision-mission-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p,
+    .testimonial-card p,
+    .vision-mission-section p {
         font-size: 1rem;
+    }
+
+    .vision-mission-section i {
+        font-size: 2.5rem;
+    }
+
+    .treatments-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .treatment-text p {
+        font-size: 1rem;
+    }
+
+    .service-icon {
+        font-size: 2.5rem;
+    }
+
+    .service-text {
+        font-size: 0.9rem;
+    }
+
+    .btn-icon {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .gallery-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .team-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .team-section p {
+        font-size: 1rem;
+    }
+
+    .medical-treatment-card {
+        margin-bottom: 20px;
+    }
+
+    .medical-treatments-section h2 {
+        font-size: 1.75rem;
     }
 }
