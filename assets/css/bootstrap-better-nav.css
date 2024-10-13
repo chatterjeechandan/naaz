@@ -12,7 +12,7 @@ body.overflow-hidden {
   overflow-y:auto;
   z-index:1035;
   background:#fff;
-  padding:20px 30px;
+  padding:20px 0px;
   color:#333;
   transition:0.4s;
 }
@@ -22,15 +22,14 @@ body.side-menu-visible #side-menu {
 }
 
 #side-menu .contents {
-  margin-top:15px;
+  margin-top:60px;
 }
 
 #side-menu .nav-link {
   text-transform: uppercase;
-      font-family: "GreycliffHebrewCF_bold";
-      font-size: 16px;
-      font-weight: 600;
-      padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 23px;
 }
 
 #side-menu .nav-link:hover {
