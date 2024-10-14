@@ -248,7 +248,7 @@ main p {
     transition: background-color 0.3s;
     width: 60px;
 }
-.gallery-section .btn-icon i {
+.gallery-section .btn-icon i, .treatments-section .btn-icon i, .btn-medical-icon i {
     transform: rotate(-45deg);
 }
 
