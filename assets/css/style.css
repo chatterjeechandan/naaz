@@ -834,6 +834,111 @@ nav.menu {
     display: block;
 }
 
+/* General Container */
+.store-details {
+    background-color: #fff;
+    padding: 30px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Title Section */
+.store-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.store-address-details {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Options Section */
+.store-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-button {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.option-button.active {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.option-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Hours Section */
+.store-hours {
+    margin-bottom: 20px;
+}
+
+.hours-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hours-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.hours-list span {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Contact Section */
+.store-contact {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-icon {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+    color: #555;
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -942,5 +1047,9 @@ nav.menu {
     .cart {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .banner-area {
+        width: 90%;
     }
 }
