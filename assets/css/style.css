@@ -199,6 +199,7 @@ nav.menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 70vw;
 }
 
 /* Footer Styles */
@@ -368,7 +369,7 @@ nav.menu {
     position: relative;
     text-align: center;
     overflow: hidden;
-    width: 70vw;
+    width: 59vw;
 }
 
 .banner-holder {
