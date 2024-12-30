@@ -1181,4 +1181,12 @@ nav.menu {
     .form-group {
         flex-direction: column;
     }
+
+    .store-details, .contact-form-section {
+        width: 90%;
+    }
+
+    .social-icons {
+        margin: 10px 20px;
+    }
 }
