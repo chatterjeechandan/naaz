@@ -830,6 +830,10 @@ nav.menu {
     align-items: center;
 }
 
+.navbar-toggler.cart-icon {
+    display: block;
+}
+
 
 
 @media (max-width: 768px) {
@@ -933,5 +937,10 @@ nav.menu {
 
     #addtoCartModal {
         padding-left: 0 !important;
+    }
+
+    .cart {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

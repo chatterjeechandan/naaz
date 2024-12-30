@@ -37,7 +37,7 @@
                         <i class="fab fa-whatsapp"></i>
                     </button>
                 </div>
-                <button class="navbar-toggler icon-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler icon-button" type="button" data-target="#left-sidebar">
                     <i class="fa fa-bars"></i>
                 </button>
             </div>
@@ -45,7 +45,7 @@
                 <a href="#"><img src="./assets/images/logo.png" alt="Routini Logo" class="header-logo"></a>
             </div>
             <div class="header-right">
-                <button class="icon-button">
+                <button class="navbar-toggler icon-button cart-icon"  data-target="#right-sidebar">
                     <i class="fas fa-shopping-cart"></i>
                 </button>
                 <button class="icon-button" id="search-trigger">
@@ -67,7 +67,7 @@
             </button>
         </div>
         <div class="layout">
-            <aside class="sidebar left-sidebar navbar navbar-collapse">
+            <aside class="sidebar left-sidebar navbar navbar-collapse" id="left-sidebar">
                 <a href="#"><img src="./assets/images/logo.png" alt="Routini Logo" class="header-logo sidebar-logo"></a>
                 <nav class="menu">
                     <h2 class="menu-title">המנות שלנו</h2>
@@ -265,14 +265,13 @@
                     </div>
                 </section>
             </main>
-            <aside class="sidebar right-sidebar">
+            <aside class="sidebar right-sidebar navbar navbar-collapse" id="right-sidebar">
                 <div class="empty-cart">
                     <i class="fas fa-shopping-basket cart-icon"></i>
                     <p class="cart-text">סל הקניות שלך ריק</p>
                 </div>
             </aside>
         </div>
-
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-column logo-column">
@@ -324,7 +323,6 @@
                 <p>All rights reserved @sukarclinic.com</p>
             </div>
         </footer>
-
         <div class="modal fade" id="addtoCartModal" tabindex="-1" aria-labelledby="addtoCartModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">

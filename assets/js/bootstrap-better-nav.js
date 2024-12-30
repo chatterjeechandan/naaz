@@ -38,24 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
     if (navbar.classList.contains('better-bootstrap-nav-left')) {
         sideMenu.classList.add('side-menu-left');
     }
-
-    // This event is triggered when the user clicks the navbar toggle button.
-    var toggleButton = document.querySelector('.navbar-toggler');
-    toggleButton.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        // Check if the menu is already visible. If so, slide out.
-        if (body.classList.contains('side-menu-visible')) {
-            slideOut();
-            return;
-        }
-
-        // Copy the navbar contents and add them to our side menu.
-        var menuContent = navbarCollapse.innerHTML;
-        sideMenu.querySelector('.contents').innerHTML = menuContent;
-
-        // Animate the side menu into frame.
-        slideIn();
+    
+    document.querySelectorAll('.navbar-toggler').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+        
+            // Media query check: Only proceed if in mobile view
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                // Check if the menu is already visible. If so, slide out.
+                if (body.classList.contains('side-menu-visible')) {
+                    slideOut();
+                    return;
+                }
+        
+                const targetSelector = button.getAttribute('data-target');
+                const targetSidebar = document.querySelector(targetSelector);
+        
+                if (targetSidebar) {
+                    sideMenu.querySelector('.contents').innerHTML = targetSidebar.innerHTML;
+        
+                    // Animate the side menu into frame.
+                    slideIn();
+                }
+            }
+        });
     });
 
     // Hide the menu when the overlay element is clicked.
