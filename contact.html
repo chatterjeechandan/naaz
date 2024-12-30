@@ -90,8 +90,8 @@
                 <nav class="menu">
                     <h2 class="menu-title">מידע</h2>
                     <ul class="menu-list">
-                        <li class="active"><a href="#" class="menu-item">אודות</a></li>
-                        <li><a href="#" class="menu-item">צור קשר</a></li>
+                        <li><a href="#" class="menu-item">אודות</a></li>
+                        <li class="active"><a href="#" class="menu-item">צור קשר</a></li>
                     </ul>
                 </nav>
                 <div class="menu-separator"></div>
@@ -109,21 +109,40 @@
                 </div>
             </aside>
             <main class="content">
+                <section class="social-icons">
+                    <a href="https://wa.me/" target="_blank" class="social-icon">
+                        <i class="fab fa-whatsapp" title="WhatsApp"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram" title="Instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f" title="Facebook"></i>
+                    </a>
+                </section>
                 <section class="store-details">
-                        <!-- Address Section -->
                         <div class="store-address">
                             <h2 class="store-title">הפרטים שלנו</h2>
                             <p class="store-address-details">כתובת: רחוב מספר שם</p>
                         </div>
-                
-                        <!-- Options Section -->
+                        <div class="menu-separator"></div>
                         <div class="store-options">
-                            <button class="option-button active">משלוחים</button>
-                            <button class="option-button active">איסוף עצמי</button>
-                            <button class="option-button active">מסעדה</button>
+                            <div class="options-wrapper">
+                                <div class="option-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="option-label">משלוחים</span>
+                                </div>
+                                <div class="option-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="option-label">איסוף עצמי</span>
+                                </div>
+                                <div class="option-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span class="option-label">מסעדה</span>
+                                </div>
+                            </div>
                         </div>
-                
-                        <!-- Opening Hours Section -->
+                        <div class="menu-separator"></div>
                         <div class="store-hours">
                             <h3 class="hours-title">שעות פתיחה:</h3>
                             <ul class="hours-list">
@@ -136,15 +155,28 @@
                                 <li><span>שבת</span> | סגור</li>
                             </ul>
                         </div>
-                
-                        <!-- Contact Section -->
                         <div class="store-contact">
                             <i class="fas fa-phone contact-icon" title="Call"></i>
                             <i class="fas fa-envelope contact-icon" title="Email"></i>
                             <i class="fas fa-map-marker-alt contact-icon" title="Location"></i>
                         </div>
                 </section>
-                
+                <section class="contact-form-section">
+                    <h2 class="section-title">הצוות שלנו כאן לכל שאלה</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="שם מלא" required>
+                            <input type="tel" class="form-input" placeholder="מסי טל" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input full-width" placeholder="דואר אלקטרוני" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-textarea full-width" placeholder="הודעה" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">יצירת קשר</button>
+                    </form>
+                </section>
             </main>
             <aside class="sidebar right-sidebar navbar navbar-collapse" id="right-sidebar">
                 <div class="cart">
