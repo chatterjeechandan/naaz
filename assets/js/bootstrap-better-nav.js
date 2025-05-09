@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (navbar.classList.contains('better-bootstrap-nav-left')) {
         sideMenu.classList.add('side-menu-left');
     }
-    
+
     document.querySelectorAll('.navbar-toggler').forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-        
+
             // Media query check: Only proceed if in mobile view
             if (window.matchMedia("(max-width: 768px)").matches) {
                 // Check if the menu is already visible. If so, slide out.
@@ -50,13 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     slideOut();
                     return;
                 }
-        
+
                 const targetSelector = button.getAttribute('data-target');
                 const targetSidebar = document.querySelector(targetSelector);
-        
+
                 if (targetSidebar) {
                     sideMenu.querySelector('.contents').innerHTML = targetSidebar.innerHTML;
-        
+
                     // Animate the side menu into frame.
                     slideIn();
                 }
