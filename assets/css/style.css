@@ -411,6 +411,13 @@ textarea.form-control {
     filter: grayscale(100%);
 }
 
+.btn-close {
+    background-color: #fff;
+    padding: 15px;
+    opacity: 1;
+    border-radius: 100%;
+}
+
 @media (max-width: 767.98px) {
     .hero-box {
         min-height: 235px;

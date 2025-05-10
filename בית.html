@@ -64,7 +64,8 @@
                     <p class="mb-4 fs-5">
                         نقدّم لك مسارًا تعليميًا متكاملًا يساعدك على الاستعداد لاجتياز امتحان الترخيص الطبي.
                     </p>
-                    <a href="#" class="btn btn-main px-4 mb-4">سجل للدوره الان</a>
+                    <a href="#" class="btn btn-main px-4 mb-4" data-bs-toggle="modal" data-bs-target="#loginModal">سجل
+                        للدوره الان</a>
                     <div class="row text-center mt-3 g-3 justify-content-between">
                         <div class="col-3 shadow stat-box">
                             <h5 class="fw-bold mb-1">10k</h5>
@@ -487,15 +488,15 @@
 
     <section class="success-gallery my-5">
         <h4 class="fw-bold text-center mb-5">من هنا بدأ نجاحهم</h4>
-      
+
         <div class="gallery-row d-flex justify-content-center gap-3 flex-wrap">
-          <img src="./assets/images/student-1.jpg" class="gallery-img grayscale" alt="">
-          <img src="./assets/images/student-2.jpg" class="gallery-img grayscale" alt="">
-          <img src="./assets/images/student-3.jpg" class="gallery-img active" alt="">
-          <img src="./assets/images/student-4.jpg" class="gallery-img grayscale" alt="">
-          <img src="./assets/images/student-5.jpg" class="gallery-img grayscale" alt="">
+            <img src="./assets/images/student-1.jpg" class="gallery-img grayscale" alt="">
+            <img src="./assets/images/student-2.jpg" class="gallery-img grayscale" alt="">
+            <img src="./assets/images/student-3.jpg" class="gallery-img active" alt="">
+            <img src="./assets/images/student-4.jpg" class="gallery-img grayscale" alt="">
+            <img src="./assets/images/student-5.jpg" class="gallery-img grayscale" alt="">
         </div>
-      </section>
+    </section>
 
     <footer class="footer mt-5 pt-5">
         <div class="container">
@@ -555,6 +556,53 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true" dir="rtl">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 overflow-hidden">
+
+                <!-- Header with image -->
+                <div class="position-relative">
+                    <img src="./assets/images/login-header.jpg" class="w-100" style="height: 200px; object-fit: cover;"
+                        alt="">
+                    <button type="button" class="btn-close position-absolute top-0 start-0 m-3" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    <h5 class="position-absolute bottom-0 start-50 translate-middle-x text-white fw-bold mb-3">تسجيل
+                        دخول</h5>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body text-end p-4">
+                    <form>
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control mb-3" placeholder="اكتب البريد الإلكتروني">
+
+                        <label class="form-label fw-bold">كلمة المرور</label>
+                        <div class="position-relative">
+                            <input type="password" class="form-control mb-1" placeholder="اكتب كلمة المرور">
+                            <i class="fas fa-eye position-absolute start-0 top-50 translate-middle-y ms-3 text-muted"
+                                style="cursor: pointer;"></i>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <label class="form-check-label d-flex align-items-center">
+                                <input type="checkbox" class="form-check-input ms-2"> تذكرني
+                            </label>
+                            <a href="#" class="small text-decoration-none text-muted">نسيت كلمة المرور؟</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-main w-100 mt-4 fw-bold">تسجيل الدخول</button>
+
+                        <p class="text-center mt-3 mb-0 small">
+                            لا يوجد لديك حساب؟ <a href="#" class="fw-bold text-warning text-decoration-none">قم
+                                بالاشتراك</a>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Core JS -->
     <script src="./assets/js/bootstrap-better-nav.js"></script>
