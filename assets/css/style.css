@@ -153,6 +153,11 @@ footer a:hover {
     background-size: cover;
 }
 
+.hero-box.about {
+    background: url('../images/about-hero.jpg') no-repeat center center;
+    background-size: cover;
+}
+
 .blog-card img {
     height: 220px;
     object-fit: cover;
@@ -256,6 +261,17 @@ textarea.form-control {
     fill: none;
 }
 
+.about-summary {
+    margin-top: -80px;
+    z-index: 3;
+}
+
+.icon-holder i {
+    background: #fde8bf;
+    color: #000;
+    border-radius: 10px !important;
+}
+
 
 @media (max-width: 767.98px) {
     .hero-box {
@@ -277,5 +293,9 @@ textarea.form-control {
 
     .footer-nav {
         text-align: center;
+    }
+
+    .about-summary {
+        margin-top: 0;
     }
 }
