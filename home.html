@@ -18,7 +18,6 @@
     <!-- swiper slider -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
 
-
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -743,11 +742,15 @@
         </div>
     </section>
 
-    <section class="success-gallery my-5 container">
+    <section class="success-gallery my-5 container overflow-hidden">
         <h4 class="fw-bold text-center mb-5">من هنا بدأ نجاحهم</h4>
-
-        <div class="swiper successSwiper">
+        <div class="swiper-container">
             <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./assets/images/student-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/student-2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/student-3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/student-4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./assets/images/student-5.jpg" alt=""></div>
                 <div class="swiper-slide"><img src="./assets/images/student-1.jpg" alt=""></div>
                 <div class="swiper-slide"><img src="./assets/images/student-2.jpg" alt=""></div>
                 <div class="swiper-slide"><img src="./assets/images/student-3.jpg" alt=""></div>
@@ -877,25 +880,18 @@
 </body>
 
 <script>
-    const swiper = new Swiper('.successSwiper', {
-        slidesPerView: 'auto',
+    var mySwiper = new Swiper(".swiper-container", {
+        spaceBetween: 10,
         centeredSlides: true,
-        spaceBetween: 30,
+        roundLengths: true,
         loop: true,
-    });
-
-    var swiper9 = new Swiper(".verticalSwiper", {
-        direction: "vertical",
-        slidesPerView: 1.8,
-        centeredSlides: true,
-        spaceBetween: 5,
-        mousewheel: true,
-        mousewheel: {
-            releaseOnEdges: true
-        },
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            draggable: true,
+        breakpoints: {
+            640: {
+                slidesPerView: 3,
+            },
+            1280: {
+                slidesPerView: 5,
+            },
         },
     });
 </script>
