@@ -19,11 +19,9 @@
     --icon-size: 1.2rem;
     --border-color: #000;
     --link-color: #111;
-}
-
-html,
-body {
-    overflow-x: hidden;
+    --space-unit: 1em;
+    --space-sm: calc(0.75 * var(--space-unit));
+    --space-md: calc(1.25 * var(--space-unit));
 }
 
 body {
@@ -443,25 +441,25 @@ textarea.form-control {
 }
 
 .verticalSwiper {
-  height: 800px;
-  width:100%;
-  margin: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+    height: 800px;
+    width: 100%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .verticalSwiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
-  opacity: 0.5;
-  z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    opacity: 0.5;
+    z-index: 9;
 }
 
 .verticalSwiper .swiper-slide-active {
-  opacity: 1;
-  z-index: 99;
+    opacity: 1;
+    z-index: 99;
 }
 
 .verticalSwiper .swiper-slide .container {
@@ -469,16 +467,43 @@ textarea.form-control {
 }
 
 .swiper-scrollbar {
-  width: 6px;
-  background: #f1f1f1;
-  border-radius: 10px;
-  right: 13% !important;
+    width: 6px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    right: 13% !important;
 }
 
 .swiper-scrollbar-drag {
-  background: #fbbf24; /* yellow color */
-  border-radius: 10px;
+    background: #fbbf24;
+    /* yellow color */
+    border-radius: 10px;
 }
+
+.stack-cards {
+    --stack-cards-gap: var(--space-sm);
+    padding-left: 0;
+}
+
+.stack-cards__item {
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--space-md);
+    height: 0;
+    padding-bottom: 50%;
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.stack-cards__item>* {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 @media (max-width: 767.98px) {
     .hero-box {
@@ -541,5 +566,9 @@ textarea.form-control {
 
     .gallery-img.active {
         width: 100%;
+    }
+
+    .stack-cards__item { 
+        height: 600px;
     }
 }
